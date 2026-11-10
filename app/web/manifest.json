@@ -1,0 +1,36 @@
+{
+  "id": "./",
+  "name": "آوا – دستیار پرستاری",
+  "short_name": "آوا",
+  "description": "دستیار آموزشی و بالینی برای پرستاران: برنامه‌های مراقبتی، تشخیص‌یاب گوردون و آزمون.",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#F2FAFB",
+  "theme_color": "#0E7490",
+  "categories": ["education", "medical"],
+  "prefer_related_applications": false,
+  "icons": [
+    { "src": "icons/Icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/Icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/Icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/Icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "تشخیص‌یاب",
+      "short_name": "تشخیص‌یاب",
+      "url": "./#/assessment",
+      "icons": [{ "src": "icons/Icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "آزمون‌ها",
+      "short_name": "آزمون‌ها",
+      "url": "./#/quizzes",
+      "icons": [{ "src": "icons/Icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ]
+}

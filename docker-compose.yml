@@ -1,0 +1,74 @@
+name: ava
+
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ava
+      POSTGRES_USER: ava
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-ava-dev-password}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ava -d ava"]
+      interval: 5s
+      retries: 10
+
+  api:
+    build:
+      context: ./server
+      args:
+        GOPROXY: ${GOPROXY:-https://proxy.golang.org,direct}
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgres://ava:${POSTGRES_PASSWORD:-ava-dev-password}@db:5432/ava?sslmode=disable
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:8000,http://127.0.0.1:8000,http://localhost:8001,http://127.0.0.1:8001}
+      ALLOW_SIGNUP: ${ALLOW_SIGNUP:-true}
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./server/testdata:/sample:ro
+      # Your private content folder, for `import --dir /content`.
+      - ${AVA_CONTENT_DIR:-./server/testdata}:/content:ro
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # The nurses' app (:8000) and the admin panel (:8001), built from
+  # ./app and served by nginx.
+  web:
+    build:
+      context: ./app
+      args:
+        AVA_API_URL: ${AVA_API_URL:-http://localhost:8080}
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+    depends_on:
+      - api
+
+  # One-off: import and publish the sample content.
+  #   docker compose run --rm seed
+  seed:
+    build:
+      context: ./server
+      args:
+        GOPROXY: ${GOPROXY:-https://proxy.golang.org,direct}
+    profiles: ["tools"]
+    environment:
+      DATABASE_URL: postgres://ava:${POSTGRES_PASSWORD:-ava-dev-password}@db:5432/ava?sslmode=disable
+    volumes:
+      - ./server/testdata:/sample:ro
+    entrypoint: ["sh", "-c"]
+    command:
+      - ava-server import --file /sample/sample_bundle.json && ava-server publish --notes "sample content"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  pgdata:

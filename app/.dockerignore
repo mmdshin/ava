@@ -1,0 +1,15 @@
+build/
+.dart_tool/
+.idea/
+*.iml
+.flutter-plugins
+.flutter-plugins-dependencies
+android/
+ios/
+macos/
+linux/
+windows/
+assets/data/
+assets/data.zip
+coverage/
+**/.DS_Store

@@ -1,0 +1,581 @@
+{
+  "schemaVersion": 2,
+  "version": 1,
+  "publishedAt": "2026-01-01T00:00:00Z",
+  "categories": [
+    {
+      "id": "acs",
+      "title": "سندرم کرونری حاد",
+      "abbr": "ACS",
+      "color": "#17A398",
+      "icon": "monitor_heart"
+    },
+    {
+      "id": "chf",
+      "title": "نارسایی قلبی",
+      "abbr": "CHF",
+      "color": "#3D8BFF",
+      "icon": "favorite"
+    },
+    {
+      "id": "dvt",
+      "title": "ترومبوز ورید عمقی",
+      "abbr": "DVT",
+      "color": "#8B5CF6",
+      "icon": "bloodtype"
+    },
+    {
+      "id": "mi",
+      "title": "انفارکتوس میوکارد",
+      "abbr": "MI",
+      "color": "#F2A93E",
+      "icon": "emergency"
+    },
+    {
+      "id": "general",
+      "title": "عمومی",
+      "color": "#EF5875",
+      "icon": "health_and_safety"
+    }
+  ],
+  "carePlans": [
+    {
+      "id": "acs-01",
+      "kind": "acs",
+      "title": "درد حاد (نمونه)",
+      "tags": [
+        "chest_pain",
+        "anxiety"
+      ],
+      "sections": [
+        {
+          "type": "relatedTo",
+          "items": [
+            "کاهش خون‌رسانی عضله قلب"
+          ]
+        },
+        {
+          "type": "definingCharacteristics",
+          "items": [
+            "گزارش درد قفسه سینه",
+            "بی‌قراری"
+          ]
+        },
+        {
+          "type": "interventions",
+          "items": [
+            "ارزیابی شدت درد با مقیاس 0 تا 10",
+            "گرفتن نوار قلب در زمان درد",
+            "اطلاع به پزشک"
+          ]
+        },
+        {
+          "type": "outcomes",
+          "items": [
+            "کاهش شدت درد گزارش‌شده"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "acs-02",
+      "kind": "acs",
+      "title": "اضطراب (نمونه)",
+      "tags": [
+        "anxiety",
+        "fear"
+      ],
+      "sections": [
+        {
+          "type": "relatedTo",
+          "items": [
+            "نگرانی درباره پیامد بیماری"
+          ]
+        },
+        {
+          "type": "definingCharacteristics",
+          "items": [
+            "بیان نگرانی",
+            "تپش قلب"
+          ]
+        },
+        {
+          "type": "interventions",
+          "items": [
+            "توضیح روند درمان به زبان ساده",
+            "حضور همراه در کنار بیمار"
+          ]
+        },
+        {
+          "type": "outcomes",
+          "items": [
+            "بیان کاهش اضطراب"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chf-01",
+      "kind": "chf",
+      "title": "حجم مایع اضافه (نمونه)",
+      "tags": [
+        "edema",
+        "dyspnea"
+      ],
+      "sections": [
+        {
+          "type": "relatedTo",
+          "items": [
+            "کاهش عملکرد پمپ قلب"
+          ]
+        },
+        {
+          "type": "definingCharacteristics",
+          "items": [
+            "ادم اندام‌ها",
+            "افزایش وزن"
+          ]
+        },
+        {
+          "type": "interventions",
+          "items": [
+            "وزن کردن روزانه در ساعت ثابت",
+            "ثبت جذب و دفع مایعات"
+          ]
+        },
+        {
+          "type": "outcomes",
+          "items": [
+            "کاهش ادم",
+            "ثبات وزن"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chf-02",
+      "kind": "chf",
+      "title": "عدم تحمل فعالیت (نمونه)",
+      "tags": [
+        "fatigue",
+        "dyspnea"
+      ],
+      "sections": [
+        {
+          "type": "relatedTo",
+          "items": [
+            "عدم تعادل اکسیژن‌رسانی و نیاز"
+          ]
+        },
+        {
+          "type": "definingCharacteristics",
+          "items": [
+            "خستگی با فعالیت کم"
+          ]
+        },
+        {
+          "type": "interventions",
+          "items": [
+            "برنامه‌ریزی دوره‌های استراحت",
+            "افزایش تدریجی فعالیت"
+          ]
+        },
+        {
+          "type": "outcomes",
+          "items": [
+            "انجام فعالیت روزانه بدون تنگی نفس"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dvt-01",
+      "kind": "dvt",
+      "title": "خطر خونریزی (نمونه)",
+      "tags": [
+        "bleeding_risk"
+      ],
+      "sections": [
+        {
+          "type": "relatedTo",
+          "items": [
+            "مصرف داروی ضد انعقاد"
+          ]
+        },
+        {
+          "type": "definingCharacteristics",
+          "items": [
+            "کبودی آسان"
+          ]
+        },
+        {
+          "type": "interventions",
+          "items": [
+            "پایش آزمایش‌های انعقادی",
+            "آموزش علائم خونریزی"
+          ]
+        },
+        {
+          "type": "outcomes",
+          "items": [
+            "عدم بروز خونریزی"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dvt-02",
+      "kind": "dvt",
+      "title": "کاهش خون‌رسانی بافت محیطی (نمونه)",
+      "tags": [
+        "edema",
+        "pain"
+      ],
+      "sections": [
+        {
+          "type": "relatedTo",
+          "items": [
+            "انسداد جریان وریدی"
+          ]
+        },
+        {
+          "type": "definingCharacteristics",
+          "items": [
+            "تورم و درد ساق پا"
+          ]
+        },
+        {
+          "type": "interventions",
+          "items": [
+            "بالا نگه داشتن اندام",
+            "پایش رنگ و دمای اندام"
+          ]
+        },
+        {
+          "type": "outcomes",
+          "items": [
+            "کاهش تورم اندام"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mi-01",
+      "kind": "mi",
+      "title": "کاهش برون‌ده قلبی (نمونه)",
+      "tags": [
+        "chest_pain",
+        "fatigue"
+      ],
+      "sections": [
+        {
+          "type": "relatedTo",
+          "items": [
+            "آسیب عضله قلب"
+          ]
+        },
+        {
+          "type": "definingCharacteristics",
+          "items": [
+            "افت فشار خون",
+            "خستگی"
+          ]
+        },
+        {
+          "type": "interventions",
+          "items": [
+            "پایش علائم حیاتی",
+            "پایش ریتم قلب"
+          ]
+        },
+        {
+          "type": "outcomes",
+          "items": [
+            "ثبات علائم حیاتی"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mi-02",
+      "kind": "mi",
+      "title": "کمبود آگاهی (نمونه)",
+      "tags": [
+        "lack_of_knowledge"
+      ],
+      "sections": [
+        {
+          "type": "relatedTo",
+          "items": [
+            "نداشتن اطلاعات درباره بیماری"
+          ]
+        },
+        {
+          "type": "definingCharacteristics",
+          "items": [
+            "پرسش‌های مکرر"
+          ]
+        },
+        {
+          "type": "interventions",
+          "items": [
+            "آموزش رژیم غذایی کم‌نمک",
+            "آموزش مصرف درست داروها"
+          ]
+        },
+        {
+          "type": "outcomes",
+          "items": [
+            "بیان درست نکات آموزشی"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "general-01",
+      "kind": "general",
+      "title": "اختلال الگوی خواب (نمونه)",
+      "tags": [
+        "insomnia",
+        "anxiety"
+      ],
+      "sections": [
+        {
+          "type": "relatedTo",
+          "items": [
+            "محیط پرسروصدای بخش"
+          ]
+        },
+        {
+          "type": "definingCharacteristics",
+          "items": [
+            "گزارش بی‌خوابی"
+          ]
+        },
+        {
+          "type": "interventions",
+          "items": [
+            "کاهش نور و صدا در شب",
+            "هماهنگی زمان داروها با خواب"
+          ]
+        },
+        {
+          "type": "outcomes",
+          "items": [
+            "گزارش خواب کافی"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "general-02",
+      "kind": "general",
+      "title": "خطر سقوط (نمونه)",
+      "tags": [
+        "fall_risk",
+        "fatigue"
+      ],
+      "sections": [
+        {
+          "type": "relatedTo",
+          "items": [
+            "ضعف عضلانی"
+          ]
+        },
+        {
+          "type": "definingCharacteristics",
+          "items": [
+            "سابقه افتادن"
+          ]
+        },
+        {
+          "type": "interventions",
+          "items": [
+            "بالا نگه داشتن نرده‌های تخت",
+            "در دسترس گذاشتن زنگ احضار"
+          ]
+        },
+        {
+          "type": "outcomes",
+          "items": [
+            "عدم بروز سقوط"
+          ]
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "sample-mixed",
+      "title": "آزمون نمونه",
+      "questions": [
+        {
+          "id": "sample-mixed-q01",
+          "text": "کدام مورد برای پیشگیری از سقوط مناسب است؟",
+          "options": [
+            "پایین نگه داشتن نرده‌های تخت",
+            "در دسترس گذاشتن زنگ احضار",
+            "خاموش کردن همه چراغ‌ها",
+            "محدود کردن مایعات"
+          ],
+          "correctIndex": 1,
+          "explanation": "زنگ احضار در دسترس به بیمار کمک می‌کند بدون تلاش خطرناک کمک بخواهد.",
+          "hint": "به ارتباط بیمار با پرستار فکر کنید."
+        },
+        {
+          "id": "sample-mixed-q02",
+          "text": "بهترین زمان وزن کردن بیمار با نارسایی قلبی کدام است؟",
+          "options": [
+            "هر زمان در دسترس بود",
+            "روزانه در ساعت ثابت",
+            "فقط هنگام ترخیص"
+          ],
+          "correctIndex": 1,
+          "explanation": "وزن روزانه در ساعت ثابت تغییرات مایع بدن را بهتر نشان می‌دهد."
+        },
+        {
+          "id": "sample-mixed-q03",
+          "text": "شدت درد را با کدام ابزار می‌سنجیم؟",
+          "options": [
+            "مقیاس عددی 0 تا 10",
+            "نبض رادیال",
+            "دمای بدن"
+          ],
+          "correctIndex": 0,
+          "explanation": "مقیاس عددی روشی ساده و رایج برای سنجش شدت درد است."
+        }
+      ]
+    },
+    {
+      "id": "sample-mi",
+      "title": "انفارکتوس میوکارد (نمونه)",
+      "kind": "mi",
+      "questions": [
+        {
+          "id": "sample-mi-q01",
+          "text": "در بیمار با انفارکتوس میوکارد کدام مورد اولویت پایش دارد؟",
+          "options": [
+            "ریتم قلب",
+            "رنگ مو",
+            "وزن هفتگی"
+          ],
+          "correctIndex": 0,
+          "explanation": "آریتمی از عوارض شایع و خطرناک پس از انفارکتوس است.",
+          "hint": "عارضه‌ای که می‌تواند ناگهانی باشد."
+        },
+        {
+          "id": "sample-mi-q02",
+          "text": "کدام آموزش برای بیمار پس از ترخیص مناسب‌تر است؟",
+          "options": [
+            "رژیم پرنمک",
+            "مصرف منظم داروها",
+            "قطع فعالیت برای همیشه"
+          ],
+          "correctIndex": 1,
+          "explanation": "مصرف منظم داروها از عود حمله پیشگیری می‌کند."
+        }
+      ]
+    }
+  ],
+  "gordonDomains": [
+    {
+      "id": "activity_rest",
+      "title": "فعالیت و استراحت (نمونه)",
+      "order": 1,
+      "items": [
+        {
+          "id": "act_fatigue",
+          "title": "خستگی یا ضعف",
+          "tags": [
+            "fatigue"
+          ]
+        },
+        {
+          "id": "act_dyspnea",
+          "title": "تنگی نفس با فعالیت",
+          "tags": [
+            "dyspnea"
+          ]
+        },
+        {
+          "id": "act_insomnia",
+          "title": "بی‌خوابی",
+          "tags": [
+            "insomnia"
+          ]
+        },
+        {
+          "id": "act_falls",
+          "title": "سابقه افتادن",
+          "tags": [
+            "fall_risk"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comfort",
+      "title": "آسایش (نمونه)",
+      "order": 2,
+      "items": [
+        {
+          "id": "comfort_chest_pain",
+          "title": "درد قفسه سینه",
+          "tags": [
+            "chest_pain"
+          ]
+        },
+        {
+          "id": "comfort_leg_pain",
+          "title": "درد یا تورم ساق پا",
+          "tags": [
+            "pain",
+            "edema"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "coping_stress",
+      "title": "سازگاری و تحمل استرس (نمونه)",
+      "order": 3,
+      "items": [
+        {
+          "id": "cope_anxiety",
+          "title": "اضطراب",
+          "tags": [
+            "anxiety"
+          ]
+        },
+        {
+          "id": "cope_fear",
+          "title": "ترس از عوارض بیماری",
+          "tags": [
+            "fear"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "health_promotion",
+      "title": "ارتقای سلامت (نمونه)",
+      "order": 4,
+      "items": [
+        {
+          "id": "hp_knowledge",
+          "title": "آگاهی کم درباره بیماری",
+          "tags": [
+            "lack_of_knowledge"
+          ]
+        },
+        {
+          "id": "hp_anticoagulant",
+          "title": "مصرف داروی ضد انعقاد",
+          "tags": [
+            "bleeding_risk"
+          ]
+        }
+      ]
+    }
+  ]
+}
